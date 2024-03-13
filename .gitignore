@@ -1,0 +1,5 @@
+#deluxgem2024  password for email address DeluxgemStore
+.env
+#Deluxgem2024  for mongodb
+#const resetPasswordLink = `https://yourapp.com/reset-password?token=${resetPasswordToken}`;
+node_modules

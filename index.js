@@ -23,7 +23,7 @@ mongoose.connect(databaseUrl, { })
 
 // Routes
 app.use("/", authRoutes);
-app.use('/api/user', userRoutes);
+app.use('/user', userRoutes);
 app.use('/products', productRoutes);
 
 // Start the server

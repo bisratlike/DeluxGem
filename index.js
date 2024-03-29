@@ -5,7 +5,8 @@ const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
 const databaseUrl = process.env.DATABASE_URL;
-
+const paymentRoutes = require('./routes/paymentRoutes');
+const cartRoutes = require('./routes/cartRoutes');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -21,10 +22,14 @@ mongoose.connect(databaseUrl, { })
     console.error('Error connecting to MongoDB:', err);
   });
 
+  app.use('/payment', paymentRoutes);
+  
 // Routes
 app.use("/", authRoutes);
 app.use('/user', userRoutes);
 app.use('/products', productRoutes);
+app.use('/payment', paymentRoutes);
+app.use('/cart', cartRoutes);
 
 // Start the server
 

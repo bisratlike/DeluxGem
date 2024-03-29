@@ -1,5 +1,16 @@
 const Product = require('../models/Product');
 
+
+exports.menuitemList = async(req, res) => {
+  try {
+    const menu = await Product.find();
+    res.status(200).json(menu);
+  }catch (err) {
+    res.status(500).json({message: err.message});
+  }
+ 
+}
+
 exports.rateProduct = async (req, res) => {
   try {
     const { productId } = req.params;
@@ -30,4 +41,6 @@ exports.shareProduct = async (req, res) => {
       res.status(500).json({ message: 'Internal server error' });
     }
   };
+
+  
   

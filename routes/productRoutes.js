@@ -7,6 +7,6 @@ router.post('/:productId/rate', productController.rateProduct);
 
 // Share product endpoint
 router.post('/:productId/share', productController.shareProduct);
-
+router.get('/all', productController.menuitemList);
 
 module.exports = router;

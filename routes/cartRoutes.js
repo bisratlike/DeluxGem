@@ -10,11 +10,16 @@ router.post(
   cartController.addtocart
 );
 router.delete(
-  "/deleteincart/:userId/:productId",
+  "/deleteElementInCart/:userId/:productId",
   authenticate,
   authorize("customer"),
   cartController.deleteincart
 );
 // router.delete("/deleteallcart",authenticate, authorize("customer"), cartController.deleteallcart);
-
+router.delete(
+  "/deleteAllCart/:userId",
+  authenticate,
+  authorize("customer"),
+  cartController.deleteallcart
+);
 module.exports = router;

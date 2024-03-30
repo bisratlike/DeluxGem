@@ -59,3 +59,17 @@ exports.addtocart =async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 }
+exports.deleteallcart = async (req, res) => {
+  try {
+    const userId = req.params.userId;
+    const userIdObj = new ObjectId(userId);
+    await Cart.deleteOne({ userId:userIdObj });
+   
+    res.status(200).json({ message: 'Cart deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+
+
+  }
+

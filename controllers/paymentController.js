@@ -1,5 +1,7 @@
 // controllers/paymentController.js
 const paypal = require('../config/paypalConfig');
+const Order = require('../models/Order');
+const orderController = require('./orderController');
 
 exports.createPayment = (req, res) => {
   const createPaymentJson = {
@@ -34,6 +36,9 @@ exports.createPayment = (req, res) => {
   });
 };
 
+// controllers/paymentController.js
+
+
 exports.executePayment = (req, res) => {
   const paymentId = req.query.paymentId;
   const payerId = req.query.PayerID;
@@ -42,11 +47,30 @@ exports.executePayment = (req, res) => {
     payer_id: payerId
   };
 
-  paypal.payment.execute(paymentId, executePaymentJson, (error, payment) => {
+  paypal.payment.execute(paymentId, executePaymentJson, async (error, payment) => {
     if (error) {
       res.status(500).json({ error: error.message });
     } else {
-      res.redirect('/success');
+      try {
+        // Assuming req.body contains the order details
+        const { user, products, totalAmount } = req.body;
+
+        // Create the order
+        const order = {
+          user,
+          products,
+          totalAmount,
+          status: 'pending' // or any initial status you prefer
+        };
+
+        // Call the createOrder function from the order controller
+        await orderController.createOrder(order);
+
+        res.redirect('/success');
+      } catch (error) {
+        console.error('Error:', error);
+        res.status(500).json({ error: error.message });
+      }
     }
   });
 };

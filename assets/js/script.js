@@ -1,3 +1,45 @@
+function sendEmail(event) {
+  event.preventDefault(); // Prevent form submission
+
+  var senderName = document.getElementById("usernamee").value;
+  var senderEmail = document.getElementById("emaill").value;
+  var senderPhone = document.getElementById("phonee").value;
+  var message = document.getElementById("note").value;
+
+  var recipient = "abenezernigussiecs@gmail.com";
+  var subject = "Email Subject";
+  var body =
+    "Sender Name: " +
+    senderName +
+    "\n" +
+    "Sender Email: " +
+    senderEmail +
+    "\n" +
+    "Sender Phone: " +
+    senderPhone +
+    "\n\n" +
+    "Message: " +
+    message;
+
+  var mailtoUrl =
+    "mailto:" +
+    encodeURIComponent(recipient) +
+    "?subject=" +
+    encodeURIComponent(subject) +
+    "&body=" +
+    encodeURIComponent(body) +
+    "&cc=" +
+    encodeURIComponent(senderEmail);
+
+  window.location.href = mailtoUrl;
+
+  // Refresh the page
+  location.reload();
+}
+
+/*------------------------------------------
+        = Register Function
+    -------------------------------------------*/
 $(document).ready(function () {
   // Handle form submission
   $("#signup-form").submit(function (event) {

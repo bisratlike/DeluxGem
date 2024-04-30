@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--        -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="BK-Techs" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="assets/images/favicon.png"
+    />
+    <title>Delux-Gem Jewellery Store</title>
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/flaticon_jowenly.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.css" rel="stylesheet" />
+    <link href="assets/css/slick.css" rel="stylesheet" />
+    <link href="assets/css/slick-theme.css" rel="stylesheet" />
+    <link href="assets/css/swiper.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.transitions.css" rel="stylesheet" />
+    <link href="assets/css/jquery.fancybox.css" rel="stylesheet" />
+    <link href="assets/css/odometer-theme-default.css" rel="stylesheet" />
+    <link href="assets/sass/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+      <!-- start preloader -->
+      <div class="preloader">
+        <div class="vertical-centered-box">
+          <div class="content">
+            <div class="loader-circle"></div>
+            <div class="loader-line-mask">
+              <div class="loader-line"></div>
+            </div>
+            <img src="assets/images/preloader.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- end preloader -->
+
+      <div class="wpo-login-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <form
+                class="wpo-accountWrapper"
+                action="https://deluxgem-2.onrender.com/signup"
+                method="POST"
+                id="signup-form"
+              >
+                <div class="wpo-accountInfo">
+                  <div class="wpo-accountInfoHeader">
+                    <a href="#"
+                      ><img src="assets/images/logopic.png" alt=""
+                    /></a>
+                    <a class="wpo-accountBtn" href="login.html">
+                      <span class="">Log in</span>
+                    </a>
+                  </div>
+                  <div class="image">
+                    <img src="assets/images/login.png" alt="" />
+                  </div>
+                  <div class="back-home">
+                    <a class="wpo-accountBtn" href="index-2.html">
+                      <span class="">Back To Home</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="wpo-accountForm form-style">
+                  <div class="fromTitle">
+                    <h2>Signup</h2>
+                    <p>Sign into your pages account</p>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12">
+                      <label for="name">Full Name</label>
+                      <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Your name here.."
+                        required
+                      />
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-12">
+                      <label>Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your email here.."
+                        required
+                      />
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-12">
+                      <div class="form-group">
+                        <label>Password</label>
+                        <input
+                          class="pwd2"
+                          type="password"
+                          id="password"
+                          placeholder="Your password here.."
+                          value="1234567890"
+                          name="password"
+                          required
+                        />
+                        <span class="input-group-btn">
+                          <button class="btn btn-default reveal3" type="button">
+                            <i class="ti-eye"></i>
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-12">
+                      <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input
+                          class="pwd3"
+                          type="password"
+                          placeholder="Your password here.."
+                          value="1234567890"
+                          id="confirmPassword"
+                        />
+                        <div class="col-lg-12 col-md-12 col-12">
+                          <label>Phone Number</label>
+                          <input
+                            type="text"
+                            id="phoneNumber"
+                            name="phoneNumber"
+                            placeholder="Your phone number here.."
+                            required
+                          />
+                        </div>
+                        <span class="input-group-btn">
+                          <button class="btn btn-default reveal2" type="button">
+                            <i class="ti-eye"></i>
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-12">
+                      <button
+                        type="submit"
+                        class="wpo-accountBtn"
+                        id="signupBtn"
+                      >
+                        Sign Up
+                      </button>
+                    </div>
+                    <div class="clearfix error-handling-messages">
+                      <div id="success">Thank you</div>
+                      <div id="error">
+                        Error occurred while creating account. Please try again
+                        later.
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="or"><span>OR</span></h4>
+                  <ul class="wpo-socialLoginBtn">
+                    <li>
+                      <button class="facebook" tabindex="0" type="button">
+                        <span><i class="ti-facebook"></i></span>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="twitter" tabindex="0" type="button">
+                        <span><i class="ti-twitter"></i></span>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="linkedin" tabindex="0" type="button">
+                        <span><i class="ti-linkedin"></i></span>
+                      </button>
+                    </li>
+                  </ul>
+                  <p class="subText">
+                    Don't have an account?
+                    <a href="login.html">Login </a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of page-wrapper -->
+
+    <!-- All JavaScript files
+      
+    ================================================== -->
+    <!-- <script>
+      $(document).ready(function () {
+        // Handle form submission
+        $("#signup-form").submit(function (event) {
+          event.preventDefault(); // Prevent the form from submitting normally
+
+          var password = $("#password").val().toString();
+          var confirmPassword = $("#confirmPassword").val().toString();
+
+          //Check if password and confirm password match
+          if (password !== confirmPassword) {
+            // Remove previous error message, if any
+            $("#confirmPasswordError").remove();
+
+            var errorMessage = $("<p>")
+              .text("Confirm password does not match!")
+              .addClass("error-message")
+              .css({
+                color: "red",
+                display: "inline-block",
+              })
+              .attr("id", "confirmPasswordError");
+
+            $("#confirmPassword").after(errorMessage);
+
+            return;
+          }
+          // Create the form data object
+          var formData = {
+            username: $("#username").val().toString(),
+            email: $("#email").val().toString(),
+            password: password,
+            PhoneNumber: $("#phoneNumber").val().toString(),
+          };
+
+          // Submit the form using AJAX
+          $.ajax({
+            url: $(this).attr("action"),
+            type: $(this).attr("method"),
+            data: JSON.stringify(formData),
+            contentType: "application/json", // Set the Content-Type header
+            success: function (response) {
+              // Handle success response
+              console.log(response);
+              alert("Account Created successfully!");
+              window.location.href = "login.html";
+            },
+            error: function (xhr, status, error) {
+              console.log(xhr); // Log the full error object for debugging'
+
+              if (xhr.status === 500) {
+                // Remove previous error message, if any
+                $("#InternalServerError").remove();
+
+                var errorMessage = $("<p>")
+                  .text("Email Already Taken!")
+                  .addClass("error-message")
+                  .css({
+                    color: "red",
+                    display: "inline-block",
+                  })
+                  .attr("id", "InternalServerError");
+
+                $("#email").after(errorMessage);
+
+                return;
+              } else {
+                // Handle other error scenarios
+                alert("An error occurred. Please try again later.");
+              }
+            },
+          });
+        });
+      });
+    </script> -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugins for this template -->
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/js/jquery.dlmenu.js"></script>
+    <script src="assets/js/jquery-plugin-collection.js"></script>
+    <!-- Custom script for this template -->
+    <script src="assets/js/script.js"></script>
+  </body>
+
+  <!--        -->
+</html>
